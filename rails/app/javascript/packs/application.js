@@ -7,6 +7,8 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
+import I18n from 'i18n-js/index.js.erb'
+window.I18n = I18n
 const componentRequireContext = require.context("components", true);
 
 const ReactRailsUJS = require("react_ujs");
