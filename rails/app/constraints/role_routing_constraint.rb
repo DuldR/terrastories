@@ -4,6 +4,8 @@ class RoleRoutingConstraint
   end
 
   def matches?(request)
+    
+    binding.pry
     user = current_user(request)
     user.present? && @block.call(user)
   end

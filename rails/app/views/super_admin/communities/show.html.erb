@@ -2,6 +2,7 @@
   <%= @community.name %> | <%= t("community") %>
 <% end %>
 
+
 <% content_for :main_heading do %>
 <div class="columns">
   <h2><%= @community.name %></h2>
@@ -75,7 +76,12 @@
     <tbody>
       <% @community.users.each do |user| %>
         <tr>
-          <td><%= user.username %></td>
+          <td>
+            <%= link_to user, class: "card card--narrow card--center" do %>
+
+              <%= user.username %>
+            <% end %>
+          </td>
           <td><%= User.human_attribute_name("role.#{user.role}") %></td>
         </tr>
       <% end %>

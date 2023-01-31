@@ -34,6 +34,7 @@ module Dashboard
     end
 
     def show
+      @user = authorize User.find(params[:id])
       @user = authorize community.users.find(params[:id])
     end
 

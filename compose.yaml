@@ -28,6 +28,8 @@ services:
       - "3000"
     environment:
       - CHECK_BUNDLER=yes
+    stdin_open: true
+    tty: true
     volumes:
       - bundler:/usr/local/bundle
       - ./rails:/api
